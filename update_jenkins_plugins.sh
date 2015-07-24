@@ -7,7 +7,7 @@ jar xf /usr/share/jenkins/jenkins.war WEB-INF/jenkins-cli.jar
 JENKINS_CLI=/tmp/WEB-INF/jenkins-cli.jar
 
 # TODO Find a better way to wait until Jenkins service is up and running
-sleep 30
+sleep 60
 
 echo "Attempting to update Jenkins plugins..."
 J="java -jar $JENKINS_CLI -s $JENKINS_URL"
