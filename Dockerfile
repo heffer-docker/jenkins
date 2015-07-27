@@ -13,6 +13,7 @@ RUN /usr/local/bin/update_jenkins_plugins.sh
 RUN \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ADD config.xml /var/lib/jenkins/config.xml
 EXPOSE 8080
 EXPOSE 50000
 CMD ["/usr/local/bin/run.sh"]
